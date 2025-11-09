@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/lab_04_tests.dir/tests/test_figures.cpp.o CMakeFiles/lab_04_tests.dir/src/figures.cpp.o -o lab_04_tests  -lgtest -lgtest_main 
