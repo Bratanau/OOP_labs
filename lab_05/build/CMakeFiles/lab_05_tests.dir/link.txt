@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/lab_05_tests.dir/tests/queue_tests.cpp.o -o lab_05_tests  -lgtest -lgtest_main 
