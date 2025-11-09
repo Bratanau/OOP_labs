@@ -1,0 +1,4 @@
+/home/lya/OOP_labs/lab_03/build/CMakeFiles/lab_03_run.dir
+/home/lya/OOP_labs/lab_03/build/CMakeFiles/lab_03_tests.dir
+/home/lya/OOP_labs/lab_03/build/CMakeFiles/edit_cache.dir
+/home/lya/OOP_labs/lab_03/build/CMakeFiles/rebuild_cache.dir

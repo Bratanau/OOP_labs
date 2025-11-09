@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/lab_03_run.dir/main.cpp.o CMakeFiles/lab_03_run.dir/src/figure.cpp.o CMakeFiles/lab_03_run.dir/src/pentagon.cpp.o CMakeFiles/lab_03_run.dir/src/rhombus.cpp.o CMakeFiles/lab_03_run.dir/src/trapezoid.cpp.o -o lab_03_run 
