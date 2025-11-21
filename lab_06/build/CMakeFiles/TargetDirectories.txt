@@ -1,0 +1,3 @@
+/home/lya/OOP_labs/lab_06/build/CMakeFiles/lab_06.dir
+/home/lya/OOP_labs/lab_06/build/CMakeFiles/edit_cache.dir
+/home/lya/OOP_labs/lab_06/build/CMakeFiles/rebuild_cache.dir
