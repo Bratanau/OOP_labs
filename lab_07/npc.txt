@@ -1,0 +1,11 @@
+10
+dragon NPC_0 228 139
+toad NPC_1 25 165
+bull NPC_2 92 185
+dragon NPC_3 404 433
+toad NPC_4 9 139
+dragon NPC_5 4 2
+bull NPC_6 476 435
+toad NPC_7 330 173
+toad NPC_8 100 3
+dragon NPC_9 454 215

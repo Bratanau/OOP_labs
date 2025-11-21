@@ -1,0 +1,72 @@
+Murder --------
+Attacker: bull NPC_0 0 19
+Killed: toad NPC_5 11 2
+
+Murder --------
+Attacker: bull NPC_0 0 0
+Killed: toad NPC_20 17 2
+
+Murder --------
+Attacker: bull NPC_0 19 0
+Killed: toad NPC_28 19 4
+
+Murder --------
+Attacker: bull NPC_0 19 17
+Killed: toad NPC_47 17 1
+
+Murder --------
+Attacker: dragon NPC_3 19 8
+Killed: bull NPC_0 0 17
+
+Murder --------
+Attacker: dragon NPC_3 19 0
+Killed: bull NPC_6 19 19
+
+Murder --------
+Attacker: dragon NPC_3 0 19
+Killed: bull NPC_7 19 0
+
+Murder --------
+Attacker: dragon NPC_3 0 0
+Killed: bull NPC_9 3 19
+
+Murder --------
+Attacker: dragon NPC_3 19 19
+Killed: bull NPC_10 19 19
+
+Murder --------
+Attacker: dragon NPC_3 0 19
+Killed: bull NPC_16 0 0
+
+Murder --------
+Attacker: dragon NPC_3 19 19
+Killed: bull NPC_17 0 19
+
+Murder --------
+Attacker: dragon NPC_3 0 0
+Killed: bull NPC_19 0 0
+
+Murder --------
+Attacker: dragon NPC_3 19 16
+Killed: bull NPC_21 0 19
+
+Murder --------
+Attacker: dragon NPC_3 16 19
+Killed: bull NPC_22 19 0
+
+Murder --------
+Attacker: dragon NPC_3 19 0
+Killed: bull NPC_23 0 0
+
+Murder --------
+Attacker: dragon NPC_3 10 0
+Killed: bull NPC_31 0 9
+
+Murder --------
+Attacker: dragon NPC_3 19 0
+Killed: bull NPC_33 19 2
+
+Murder --------
+Attacker: dragon NPC_3 19 19
+Killed: bull NPC_38 19 10
+
