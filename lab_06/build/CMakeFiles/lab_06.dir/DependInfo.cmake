@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lya/OOP_labs/lab_06/main.cpp" "CMakeFiles/lab_06.dir/main.cpp.o" "gcc" "CMakeFiles/lab_06.dir/main.cpp.o.d"
   "/home/lya/OOP_labs/lab_06/src/bandit.cpp" "CMakeFiles/lab_06.dir/src/bandit.cpp.o" "gcc" "CMakeFiles/lab_06.dir/src/bandit.cpp.o.d"
+  "/home/lya/OOP_labs/lab_06/src/editor.cpp" "CMakeFiles/lab_06.dir/src/editor.cpp.o" "gcc" "CMakeFiles/lab_06.dir/src/editor.cpp.o.d"
   "/home/lya/OOP_labs/lab_06/src/npc.cpp" "CMakeFiles/lab_06.dir/src/npc.cpp.o" "gcc" "CMakeFiles/lab_06.dir/src/npc.cpp.o.d"
   "/home/lya/OOP_labs/lab_06/src/ork.cpp" "CMakeFiles/lab_06.dir/src/ork.cpp.o" "gcc" "CMakeFiles/lab_06.dir/src/ork.cpp.o.d"
   "/home/lya/OOP_labs/lab_06/src/werewolf.cpp" "CMakeFiles/lab_06.dir/src/werewolf.cpp.o" "gcc" "CMakeFiles/lab_06.dir/src/werewolf.cpp.o.d"

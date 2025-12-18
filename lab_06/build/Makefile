@@ -177,6 +177,30 @@ src/bandit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/bandit.cpp.s
 .PHONY : src/bandit.cpp.s
 
+src/editor.o: src/editor.cpp.o
+.PHONY : src/editor.o
+
+# target to build an object file
+src/editor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/editor.cpp.o
+.PHONY : src/editor.cpp.o
+
+src/editor.i: src/editor.cpp.i
+.PHONY : src/editor.i
+
+# target to preprocess a source file
+src/editor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/editor.cpp.i
+.PHONY : src/editor.cpp.i
+
+src/editor.s: src/editor.cpp.s
+.PHONY : src/editor.s
+
+# target to generate assembly for a file
+src/editor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/editor.cpp.s
+.PHONY : src/editor.cpp.s
+
 src/npc.o: src/npc.cpp.o
 .PHONY : src/npc.o
 
@@ -264,6 +288,9 @@ help:
 	@echo "... src/bandit.o"
 	@echo "... src/bandit.i"
 	@echo "... src/bandit.s"
+	@echo "... src/editor.o"
+	@echo "... src/editor.i"
+	@echo "... src/editor.s"
 	@echo "... src/npc.o"
 	@echo "... src/npc.i"
 	@echo "... src/npc.s"

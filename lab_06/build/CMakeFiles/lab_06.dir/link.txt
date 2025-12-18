@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/lab_06.dir/main.cpp.o CMakeFiles/lab_06.dir/src/npc.cpp.o CMakeFiles/lab_06.dir/src/bandit.cpp.o CMakeFiles/lab_06.dir/src/ork.cpp.o CMakeFiles/lab_06.dir/src/werewolf.cpp.o -o lab_06 
+/usr/bin/c++ CMakeFiles/lab_06.dir/main.cpp.o CMakeFiles/lab_06.dir/src/npc.cpp.o CMakeFiles/lab_06.dir/src/bandit.cpp.o CMakeFiles/lab_06.dir/src/ork.cpp.o CMakeFiles/lab_06.dir/src/werewolf.cpp.o CMakeFiles/lab_06.dir/src/editor.cpp.o -o lab_06 

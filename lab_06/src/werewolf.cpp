@@ -10,33 +10,34 @@ void Werewolf::print()
     std::cout << *this;
 }
 
+bool Werewolf::accept(std::shared_ptr<NPC> attacker) {
+    FightVisitor visitor(attacker);
+    return visitor.visit(std::make_shared<Werewolf>(*this));
+}
+
 void Werewolf::save(std::ostream &os)
 {
     os << WerewolfType << std::endl;
     NPC::save(os);
 }
 
-bool Werewolf::is_werewolf() const
-{
-    return true;
-}
-
 bool Werewolf::fight(std::shared_ptr<Bandit> other)
 {
+    // Оборотень убивает разбойника
     fight_notify(other, true);
     return true;
 }
 
 bool Werewolf::fight(std::shared_ptr<Ork> other)
 {
-    fight_notify(other, true);
-    return true;
+    // Оборотень НЕ убивает орка
+    return false;
 }
 
 bool Werewolf::fight(std::shared_ptr<Werewolf> other)
 {
-    fight_notify(other, true);
-    return true;
+    // Оборотень НЕ убивает другого оборотня
+    return false;
 }
 
 std::ostream &operator<<(std::ostream &os, Werewolf &werewolf)

@@ -10,31 +10,32 @@ void Bandit::print()
     std::cout << *this;
 }
 
+bool Bandit::accept(std::shared_ptr<NPC> attacker) {
+    FightVisitor visitor(attacker);
+    return visitor.visit(std::make_shared<Bandit>(*this));
+}
+
 void Bandit::save(std::ostream &os)
 {
     os << BanditType << std::endl;
     NPC::save(os);
 }
 
-bool Bandit::is_bandit() const
-{
-    return true;
-}
-
 bool Bandit::fight(std::shared_ptr<Bandit> other)
 {
-    fight_notify(other, true);
-    return true;
+    // Разбойник НЕ убивает другого разбойника
+    return false;
 }
 
 bool Bandit::fight(std::shared_ptr<Ork> other)
 {
-    fight_notify(other, true);
-    return true;
+    // Разбойник НЕ убивает орка
+    return false;
 }
 
 bool Bandit::fight(std::shared_ptr<Werewolf> other)
 {
+    // Разбойник убивает оборотня
     fight_notify(other, true);
     return true;
 }

@@ -1,10 +1,22 @@
 #include "npc.h"
 
 NPC::NPC(NpcType t, int _x, int _y) : type(t), x(_x), y(_y) {}
-NPC::NPC(NpcType t, std::istream &is) : type(t)
-{
+NPC::NPC(NpcType t, std::istream &is) : type(t) {
+    // We store only coordinates for now
     is >> x;
     is >> y;
+}
+
+bool FightVisitor::visit(std::shared_ptr<Bandit> bandit) {
+    return attacker->fight(bandit);
+}
+
+bool FightVisitor::visit(std::shared_ptr<Ork> ork) {
+    return attacker->fight(ork);
+}
+
+bool FightVisitor::visit(std::shared_ptr<Werewolf> werewolf) {
+    return attacker->fight(werewolf);
 }
 
 void NPC::subscribe(std::shared_ptr<IFightObserver> observer)
@@ -20,23 +32,7 @@ void NPC::fight_notify(const std::shared_ptr<NPC> defender, bool win)
 
 bool NPC::is_close(const std::shared_ptr<NPC> &other, size_t distance) const
 {
-    if (std::pow(x - other->x, 2) + std::pow(y - other->y, 2) <= std::pow(distance, 2))
-        return true;
-    else
-        return false;
-}
-
-bool NPC::is_bandit() const
-{
-    return false;
-}
-bool NPC::is_ork() const
-{
-    return false;
-}
-bool NPC::is_werewolf() const
-{
-    return false;
+    return pow((x - other->x), 2) + pow((y - other->y), 2) <= distance * distance;
 }
 
 void NPC::save(std::ostream &os)

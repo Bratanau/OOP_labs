@@ -10,33 +10,34 @@ void Ork::print()
     std::cout << *this;
 }
 
+bool Ork::accept(std::shared_ptr<NPC> attacker) {
+    FightVisitor visitor(attacker);
+    return visitor.visit(std::make_shared<Ork>(*this));
+}
+
 void Ork::save(std::ostream &os)
 {
     os << OrkType << std::endl;
     NPC::save(os);
 }
 
-bool Ork::is_ork() const
-{
-    return true;
-}
-
 bool Ork::fight(std::shared_ptr<Bandit> other)
 {
+    // Орк убивает разбойника
     fight_notify(other, true);
     return true;
 }
 
 bool Ork::fight(std::shared_ptr<Ork> other)
 {
-    fight_notify(other, true);
-    return true;
+    // Орк НЕ убивает другого орка
+    return false;
 }
 
 bool Ork::fight(std::shared_ptr<Werewolf> other)
 {
-    fight_notify(other, true);
-    return true;
+    // Орк НЕ убивает оборотня
+    return false;
 }
 
 std::ostream &operator<<(std::ostream &os, Ork &ork)

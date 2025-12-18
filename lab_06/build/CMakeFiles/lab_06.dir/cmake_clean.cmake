@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab_06.dir/main.cpp.o.d"
   "CMakeFiles/lab_06.dir/src/bandit.cpp.o"
   "CMakeFiles/lab_06.dir/src/bandit.cpp.o.d"
+  "CMakeFiles/lab_06.dir/src/editor.cpp.o"
+  "CMakeFiles/lab_06.dir/src/editor.cpp.o.d"
   "CMakeFiles/lab_06.dir/src/npc.cpp.o"
   "CMakeFiles/lab_06.dir/src/npc.cpp.o.d"
   "CMakeFiles/lab_06.dir/src/ork.cpp.o"

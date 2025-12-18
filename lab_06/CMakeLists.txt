@@ -13,4 +13,5 @@ add_executable(lab_06
     src/bandit.cpp
     src/ork.cpp
     src/werewolf.cpp
-)
+    src/editor.cpp 
+) 

@@ -8,8 +8,8 @@ struct Werewolf : public NPC
 
     void print() override;
     void save(std::ostream &os) override;
-    bool is_werewolf() const override;
 
+    bool accept(std::shared_ptr<NPC> attacker) override;
     bool fight(std::shared_ptr<Bandit> other) override;
     bool fight(std::shared_ptr<Ork> other) override;
     bool fight(std::shared_ptr<Werewolf> other) override;

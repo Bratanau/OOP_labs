@@ -1,0 +1,64 @@
+Murder --------
+Attacker: 2
+453
+311
+Killed: 3
+468
+367
+
+Murder --------
+Attacker: 3
+234
+67
+Killed: 1
+189
+89
+
+Murder --------
+Attacker: 2
+396
+445
+Killed: 2
+362
+403
+
+Murder --------
+Attacker: 1
+189
+89
+Killed: 3
+234
+67
+
+Murder --------
+Attacker: 2
+362
+403
+Killed: 2
+396
+445
+
+Murder --------
+Attacker: 3
+468
+367
+Killed: 2
+453
+311
+
+Murder --------
+Attacker: 2
+371
+142
+Killed: 1
+415
+184
+
+Murder --------
+Attacker: 1
+415
+184
+Killed: 2
+371
+142
+

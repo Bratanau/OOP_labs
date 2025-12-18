@@ -1,5 +1,7 @@
-CMakeFiles/lab_06.dir/main.cpp.o: /home/lya/OOP_labs/lab_06/main.cpp \
- /usr/include/stdc-predef.h /home/lya/OOP_labs/lab_06/include/npc.h \
+CMakeFiles/lab_06.dir/src/editor.cpp.o: \
+ /home/lya/OOP_labs/lab_06/src/editor.cpp /usr/include/stdc-predef.h \
+ /home/lya/OOP_labs/lab_06/src/../include/editor.h \
+ /home/lya/OOP_labs/lab_06/src/../include/npc.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -239,4 +241,7 @@ CMakeFiles/lab_06.dir/main.cpp.o: /home/lya/OOP_labs/lab_06/main.cpp \
  /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
  /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/math.h \
- /home/lya/OOP_labs/lab_06/include/editor.h
+ /home/lya/OOP_labs/lab_06/src/../include/bandit.h \
+ /home/lya/OOP_labs/lab_06/src/../include/ork.h \
+ /home/lya/OOP_labs/lab_06/src/../include/werewolf.h \
+ /usr/include/c++/13/ctime
