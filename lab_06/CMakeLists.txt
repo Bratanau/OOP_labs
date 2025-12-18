@@ -1,17 +1,29 @@
 cmake_minimum_required(VERSION 3.10)
+project(lab_06 LANGUAGES CXX)
 
-project(lab_06)
-
+# Используем C++20, т.к. в коде применяются concepts
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include)
-
-add_executable(lab_06 
-    main.cpp 
-    src/npc.cpp
+add_executable(lab_06_run
+    main.cpp
     src/bandit.cpp
+    src/editor.cpp
+    src/npc.cpp
     src/ork.cpp
     src/werewolf.cpp
-    src/editor.cpp 
-) 
+)
+
+add_executable(lab_06_tests
+    tests/main_test.cpp
+    src/bandit.cpp
+    src/editor.cpp
+    src/npc.cpp
+    src/ork.cpp
+    src/werewolf.cpp
+)
+
+target_link_libraries(lab_06_tests PRIVATE gtest)
+
+target_include_directories(lab_06_run PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(lab_06_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

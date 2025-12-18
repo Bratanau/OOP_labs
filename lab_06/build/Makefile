@@ -117,24 +117,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab_06
+# Target rules for targets named lab_06_run
 
 # Build rule for target.
-lab_06: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab_06
-.PHONY : lab_06
+lab_06_run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab_06_run
+.PHONY : lab_06_run
 
 # fast build rule for target.
-lab_06/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/build
-.PHONY : lab_06/fast
+lab_06_run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/build
+.PHONY : lab_06_run/fast
+
+#=============================================================================
+# Target rules for targets named lab_06_tests
+
+# Build rule for target.
+lab_06_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab_06_tests
+.PHONY : lab_06_tests
+
+# fast build rule for target.
+lab_06_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/build
+.PHONY : lab_06_tests/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +155,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +163,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/bandit.o: src/bandit.cpp.o
@@ -158,7 +171,8 @@ src/bandit.o: src/bandit.cpp.o
 
 # target to build an object file
 src/bandit.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/bandit.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/bandit.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/bandit.cpp.o
 .PHONY : src/bandit.cpp.o
 
 src/bandit.i: src/bandit.cpp.i
@@ -166,7 +180,8 @@ src/bandit.i: src/bandit.cpp.i
 
 # target to preprocess a source file
 src/bandit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/bandit.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/bandit.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/bandit.cpp.i
 .PHONY : src/bandit.cpp.i
 
 src/bandit.s: src/bandit.cpp.s
@@ -174,7 +189,8 @@ src/bandit.s: src/bandit.cpp.s
 
 # target to generate assembly for a file
 src/bandit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/bandit.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/bandit.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/bandit.cpp.s
 .PHONY : src/bandit.cpp.s
 
 src/editor.o: src/editor.cpp.o
@@ -182,7 +198,8 @@ src/editor.o: src/editor.cpp.o
 
 # target to build an object file
 src/editor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/editor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/editor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/editor.cpp.o
 .PHONY : src/editor.cpp.o
 
 src/editor.i: src/editor.cpp.i
@@ -190,7 +207,8 @@ src/editor.i: src/editor.cpp.i
 
 # target to preprocess a source file
 src/editor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/editor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/editor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/editor.cpp.i
 .PHONY : src/editor.cpp.i
 
 src/editor.s: src/editor.cpp.s
@@ -198,7 +216,8 @@ src/editor.s: src/editor.cpp.s
 
 # target to generate assembly for a file
 src/editor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/editor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/editor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/editor.cpp.s
 .PHONY : src/editor.cpp.s
 
 src/npc.o: src/npc.cpp.o
@@ -206,7 +225,8 @@ src/npc.o: src/npc.cpp.o
 
 # target to build an object file
 src/npc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/npc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/npc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/npc.cpp.o
 .PHONY : src/npc.cpp.o
 
 src/npc.i: src/npc.cpp.i
@@ -214,7 +234,8 @@ src/npc.i: src/npc.cpp.i
 
 # target to preprocess a source file
 src/npc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/npc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/npc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/npc.cpp.i
 .PHONY : src/npc.cpp.i
 
 src/npc.s: src/npc.cpp.s
@@ -222,7 +243,8 @@ src/npc.s: src/npc.cpp.s
 
 # target to generate assembly for a file
 src/npc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/npc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/npc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/npc.cpp.s
 .PHONY : src/npc.cpp.s
 
 src/ork.o: src/ork.cpp.o
@@ -230,7 +252,8 @@ src/ork.o: src/ork.cpp.o
 
 # target to build an object file
 src/ork.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/ork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/ork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/ork.cpp.o
 .PHONY : src/ork.cpp.o
 
 src/ork.i: src/ork.cpp.i
@@ -238,7 +261,8 @@ src/ork.i: src/ork.cpp.i
 
 # target to preprocess a source file
 src/ork.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/ork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/ork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/ork.cpp.i
 .PHONY : src/ork.cpp.i
 
 src/ork.s: src/ork.cpp.s
@@ -246,7 +270,8 @@ src/ork.s: src/ork.cpp.s
 
 # target to generate assembly for a file
 src/ork.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/ork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/ork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/ork.cpp.s
 .PHONY : src/ork.cpp.s
 
 src/werewolf.o: src/werewolf.cpp.o
@@ -254,7 +279,8 @@ src/werewolf.o: src/werewolf.cpp.o
 
 # target to build an object file
 src/werewolf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/werewolf.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/werewolf.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/werewolf.cpp.o
 .PHONY : src/werewolf.cpp.o
 
 src/werewolf.i: src/werewolf.cpp.i
@@ -262,7 +288,8 @@ src/werewolf.i: src/werewolf.cpp.i
 
 # target to preprocess a source file
 src/werewolf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/werewolf.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/werewolf.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/werewolf.cpp.i
 .PHONY : src/werewolf.cpp.i
 
 src/werewolf.s: src/werewolf.cpp.s
@@ -270,8 +297,33 @@ src/werewolf.s: src/werewolf.cpp.s
 
 # target to generate assembly for a file
 src/werewolf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06.dir/build.make CMakeFiles/lab_06.dir/src/werewolf.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_run.dir/build.make CMakeFiles/lab_06_run.dir/src/werewolf.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/src/werewolf.cpp.s
 .PHONY : src/werewolf.cpp.s
+
+tests/main_test.o: tests/main_test.cpp.o
+.PHONY : tests/main_test.o
+
+# target to build an object file
+tests/main_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/tests/main_test.cpp.o
+.PHONY : tests/main_test.cpp.o
+
+tests/main_test.i: tests/main_test.cpp.i
+.PHONY : tests/main_test.i
+
+# target to preprocess a source file
+tests/main_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/tests/main_test.cpp.i
+.PHONY : tests/main_test.cpp.i
+
+tests/main_test.s: tests/main_test.cpp.s
+.PHONY : tests/main_test.s
+
+# target to generate assembly for a file
+tests/main_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_06_tests.dir/build.make CMakeFiles/lab_06_tests.dir/tests/main_test.cpp.s
+.PHONY : tests/main_test.cpp.s
 
 # Help Target
 help:
@@ -281,7 +333,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lab_06"
+	@echo "... lab_06_run"
+	@echo "... lab_06_tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -300,6 +353,9 @@ help:
 	@echo "... src/werewolf.o"
 	@echo "... src/werewolf.i"
 	@echo "... src/werewolf.s"
+	@echo "... tests/main_test.o"
+	@echo "... tests/main_test.i"
+	@echo "... tests/main_test.s"
 .PHONY : help
 
 
