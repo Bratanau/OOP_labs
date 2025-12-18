@@ -1,7 +1,7 @@
 #include "../include/editor.h"
-#include "../include/Bull.h"
-#include "../include/Dragon.h"
-#include "../include/Toad.h"
+#include "../include/ork.h"
+#include "../include/bandit.h"
+#include "../include/werewolf.h"
 #include "../include/npc.h"
 #include "../include/utils.h"
 #include <ctime>
@@ -63,14 +63,14 @@ class FileObserver : public IFightObserver {
 void initialize_editor() { std::ofstream file("../log.txt", std::ios::trunc); }
 
 int get_type_from_string(const std::string &str) {
-    if (str == "dragon") {
-        return DragonType;
+    if (str == "bandit" || str == "Bandit") {
+        return BanditType;
     }
-    if (str == "bull") {
-        return BullType;
+    if (str == "ork" || str == "Ork") {
+        return OrkType;
     }
-    if (str == "toad") {
-        return ToadType;
+    if (str == "werewolf" || str == "Werewolf") {
+        return WerewolfType;
     }
     return 0;
 }
@@ -83,14 +83,14 @@ std::shared_ptr<NPC> factory(std::istream &is) {
     int type = get_type_from_string(type_str);
     if (type) {
         switch (type) {
-        case DragonType:
-            result = std::make_shared<Dragon>(is);
+        case BanditType:
+            result = std::make_shared<Bandit>(is);
             break;
-        case BullType:
-            result = std::make_shared<Bull>(is);
+        case OrkType:
+            result = std::make_shared<Ork>(is);
             break;
-        case ToadType:
-            result = std::make_shared<Toad>(is);
+        case WerewolfType:
+            result = std::make_shared<Werewolf>(is);
             break;
         }
     } else
@@ -107,14 +107,14 @@ std::shared_ptr<NPC> factory(std::istream &is) {
 std::shared_ptr<NPC> factory(NpcType type, std::string &name, int x, int y) {
     std::shared_ptr<NPC> result;
     switch (type) {
-    case DragonType:
-        result = std::make_shared<Dragon>(name, x, y);
+    case BanditType:
+        result = std::make_shared<Bandit>(name, x, y);
         break;
-    case BullType:
-        result = std::make_shared<Bull>(name, x, y);
+    case OrkType:
+        result = std::make_shared<Ork>(name, x, y);
         break;
-    case ToadType:
-        result = std::make_shared<Toad>(name, x, y);
+    case WerewolfType:
+        result = std::make_shared<Werewolf>(name, x, y);
         break;
     default:
         break;

@@ -12,17 +12,17 @@
 
 // type for npcs
 struct NPC;
-struct Bull;
-struct Toad;
-struct Dragon;
+struct Ork;
+struct Bandit;
+struct Werewolf;
 using set_t = std::set<std::shared_ptr<NPC>>;
 
 enum NpcType
 {
     Unknown = 0,
-    ToadType = 1,
-    DragonType = 2,
-    BullType = 3
+    BanditType = 1,
+    OrkType = 2,
+    WerewolfType = 3
 };
 
 struct NPCParams {
@@ -40,9 +40,9 @@ class FightVisitor {
     public:
         FightVisitor(std::shared_ptr<NPC> atk) : attacker(atk) {}
         virtual ~FightVisitor() = default;
-        bool visit(std::shared_ptr<Dragon> desman);
-        bool visit(std::shared_ptr<Toad> bittern);
-        bool visit(std::shared_ptr<Bull> bear);
+        bool visit(std::shared_ptr<Ork> ork);
+        bool visit(std::shared_ptr<Werewolf> werewolf);
+        bool visit(std::shared_ptr<Bandit> bandit);
 };
 
 struct NPC : public std::enable_shared_from_this<NPC>
@@ -62,11 +62,10 @@ struct NPC : public std::enable_shared_from_this<NPC>
     void subscribe(std::shared_ptr<IFightObserver>observer );
     void fight_notify(const std::shared_ptr<NPC> defender,bool win);
     virtual bool is_close(const std::shared_ptr<NPC> &other, size_t distance) const;
-
     virtual bool accept(std::shared_ptr<NPC> attacker) = 0;
-    virtual bool fight(std::shared_ptr<Bull> other) = 0;
-    virtual bool fight(std::shared_ptr<Dragon> other) = 0;
-    virtual bool fight(std::shared_ptr<Toad> other) = 0;
+    virtual bool fight(std::shared_ptr<Bandit> other) = 0;
+    virtual bool fight(std::shared_ptr<Ork> other) = 0;
+    virtual bool fight(std::shared_ptr<Werewolf> other) = 0;
     virtual void print() = 0;
 
     virtual void save(std::ostream &os);

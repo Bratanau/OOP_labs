@@ -1,72 +1,184 @@
 Murder --------
-Attacker: bull NPC_0 0 19
-Killed: toad NPC_5 11 2
+Attacker: Bandit NPC_0 19 19
+Killed: Werewolf NPC_4 4 3
 
 Murder --------
-Attacker: bull NPC_0 0 0
-Killed: toad NPC_20 17 2
+Attacker: Bandit NPC_0 19 19
+Killed: Werewolf NPC_9 14 7
 
 Murder --------
-Attacker: bull NPC_0 19 0
-Killed: toad NPC_28 19 4
+Attacker: Bandit NPC_0 0 11
+Killed: Werewolf NPC_27 13 5
 
 Murder --------
-Attacker: bull NPC_0 19 17
-Killed: toad NPC_47 17 1
+Attacker: Bandit NPC_0 0 19
+Killed: Werewolf NPC_35 10 7
 
 Murder --------
-Attacker: dragon NPC_3 19 8
-Killed: bull NPC_0 0 17
+Attacker: Bandit NPC_0 19 0
+Killed: Werewolf NPC_42 5 3
 
 Murder --------
-Attacker: dragon NPC_3 19 0
-Killed: bull NPC_6 19 19
+Attacker: Bandit NPC_3 1 0
+Killed: Werewolf NPC_2 12 19
 
 Murder --------
-Attacker: dragon NPC_3 0 19
-Killed: bull NPC_7 19 0
+Attacker: Bandit NPC_3 19 1
+Killed: Werewolf NPC_8 10 17
 
 Murder --------
-Attacker: dragon NPC_3 0 0
-Killed: bull NPC_9 3 19
+Attacker: Bandit NPC_3 19 19
+Killed: Werewolf NPC_21 12 18
 
 Murder --------
-Attacker: dragon NPC_3 19 19
-Killed: bull NPC_10 19 19
+Attacker: Bandit NPC_3 19 0
+Killed: Werewolf NPC_22 14 18
 
 Murder --------
-Attacker: dragon NPC_3 0 19
-Killed: bull NPC_16 0 0
+Attacker: Bandit NPC_3 19 19
+Killed: Werewolf NPC_26 19 11
 
 Murder --------
-Attacker: dragon NPC_3 19 19
-Killed: bull NPC_17 0 19
+Attacker: Bandit NPC_3 19 0
+Killed: Werewolf NPC_37 19 19
 
 Murder --------
-Attacker: dragon NPC_3 0 0
-Killed: bull NPC_19 0 0
+Attacker: Bandit NPC_3 19 0
+Killed: Werewolf NPC_45 16 17
 
 Murder --------
-Attacker: dragon NPC_3 19 16
-Killed: bull NPC_21 0 19
+Attacker: Bandit NPC_3 19 0
+Killed: Werewolf NPC_46 13 11
 
 Murder --------
-Attacker: dragon NPC_3 16 19
-Killed: bull NPC_22 19 0
+Attacker: Bandit NPC_5 0 19
+Killed: Werewolf NPC_1 9 10
 
 Murder --------
-Attacker: dragon NPC_3 19 0
-Killed: bull NPC_23 0 0
+Attacker: Bandit NPC_5 19 19
+Killed: Werewolf NPC_2 12 19
 
 Murder --------
-Attacker: dragon NPC_3 10 0
-Killed: bull NPC_31 0 9
+Attacker: Bandit NPC_5 19 2
+Killed: Werewolf NPC_8 10 17
 
 Murder --------
-Attacker: dragon NPC_3 19 0
-Killed: bull NPC_33 19 2
+Attacker: Bandit NPC_5 19 19
+Killed: Werewolf NPC_14 4 14
 
 Murder --------
-Attacker: dragon NPC_3 19 19
-Killed: bull NPC_38 19 10
+Attacker: Bandit NPC_5 0 0
+Killed: Werewolf NPC_21 12 18
+
+Murder --------
+Attacker: Bandit NPC_5 19 11
+Killed: Werewolf NPC_34 3 14
+
+Murder --------
+Attacker: Bandit NPC_5 0 0
+Killed: Werewolf NPC_45 16 17
+
+Murder --------
+Attacker: Ork NPC_7 0 0
+Killed: Bandit NPC_3 0 17
+
+Murder --------
+Attacker: Ork NPC_7 0 14
+Killed: Bandit NPC_5 19 19
+
+Murder --------
+Attacker: Ork NPC_7 0 19
+Killed: Bandit NPC_13 0 0
+
+Murder --------
+Attacker: Ork NPC_7 0 19
+Killed: Bandit NPC_15 0 0
+
+Murder --------
+Attacker: Ork NPC_7 0 0
+Killed: Bandit NPC_16 19 19
+
+Murder --------
+Attacker: Ork NPC_7 0 19
+Killed: Bandit NPC_23 19 0
+
+Murder --------
+Attacker: Ork NPC_7 13 0
+Killed: Bandit NPC_24 0 3
+
+Murder --------
+Attacker: Ork NPC_7 19 0
+Killed: Bandit NPC_25 19 0
+
+Murder --------
+Attacker: Ork NPC_7 0 7
+Killed: Bandit NPC_28 0 8
+
+Murder --------
+Attacker: Ork NPC_7 19 0
+Killed: Bandit NPC_29 0 0
+
+Murder --------
+Attacker: Ork NPC_7 19 0
+Killed: Bandit NPC_30 0 0
+
+Murder --------
+Attacker: Ork NPC_7 0 17
+Killed: Bandit NPC_31 4 19
+
+Murder --------
+Attacker: Ork NPC_7 19 19
+Killed: Bandit NPC_33 0 0
+
+Murder --------
+Attacker: Ork NPC_7 19 19
+Killed: Bandit NPC_38 0 0
+
+Murder --------
+Attacker: Ork NPC_7 16 19
+Killed: Bandit NPC_40 8 0
+
+Murder --------
+Attacker: Ork NPC_7 19 19
+Killed: Bandit NPC_47 19 1
+
+Murder --------
+Attacker: Ork NPC_12 0 3
+Killed: Bandit NPC_3 11 0
+
+Murder --------
+Attacker: Ork NPC_12 19 0
+Killed: Bandit NPC_13 17 0
+
+Murder --------
+Attacker: Ork NPC_12 19 19
+Killed: Bandit NPC_15 19 19
+
+Murder --------
+Attacker: Ork NPC_12 19 19
+Killed: Bandit NPC_23 0 17
+
+Murder --------
+Attacker: Ork NPC_12 0 2
+Killed: Bandit NPC_25 0 0
+
+Murder --------
+Attacker: Ork NPC_12 13 19
+Killed: Bandit NPC_28 19 10
+
+Murder --------
+Attacker: Ork NPC_12 19 0
+Killed: Bandit NPC_29 19 7
+
+Murder --------
+Attacker: Ork NPC_12 0 0
+Killed: Bandit NPC_31 0 19
+
+Murder --------
+Attacker: Ork NPC_12 0 19
+Killed: Bandit NPC_33 8 0
+
+Murder --------
+Attacker: Ork NPC_12 19 0
+Killed: Bandit NPC_38 19 0
 

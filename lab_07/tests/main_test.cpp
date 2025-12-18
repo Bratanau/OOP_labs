@@ -2,9 +2,9 @@
 #include <gtest/gtest.h>
 
 #include "../include/npc.h"
-#include "../include/Dragon.h"
-#include "../include/Bull.h"
-#include "../include/Toad.h"
+#include "../include/ork.h"
+#include "../include/bandit.h"
+#include "../include/werewolf.h"
 #include "../include/editor.h"
 #include "../include/fightManager.h"
 #include "../include/utils.h"
@@ -40,17 +40,17 @@ TEST(UtilsTest, GameIsOverUsesGameDurationSeconds) {
 
 TEST(NPCTest, MoveClampsToBounds) {
     std::string name = "test";
-    Dragon d{name, 0, 0};
+    Ork o{name, 0, 0};
 
     // Уход сильно в минус
-    d.move(-100, -100, 10, 10);
-    auto [x1, y1] = d.position();
+    o.move(-100, -100, 10, 10);
+    auto [x1, y1] = o.position();
     EXPECT_EQ(x1, 0);
     EXPECT_EQ(y1, 0);
 
     // Уход сильно в плюс
-    d.move(100, 100, 10, 10);
-    auto [x2, y2] = d.position();
+    o.move(100, 100, 10, 10);
+    auto [x2, y2] = o.position();
     EXPECT_EQ(x2, 10);
     EXPECT_EQ(y2, 10);
 }
@@ -59,16 +59,16 @@ TEST(NPCTest, IsCloseUsesEuclideanDistance) {
     std::string name1 = "a";
     std::string name2 = "b";
 
-    auto d1 = std::make_shared<Dragon>(name1, 0, 0);
-    auto d2 = std::make_shared<Dragon>(name2, 3, 4); // расстояние = 5
+    auto n1 = std::make_shared<Ork>(name1, 0, 0);
+    auto n2 = std::make_shared<Ork>(name2, 3, 4); // расстояние = 5
 
-    EXPECT_TRUE(d1->is_close(d2, 5));
-    EXPECT_FALSE(d1->is_close(d2, 4));
+    EXPECT_TRUE(n1->is_close(n2, 5));
+    EXPECT_FALSE(n1->is_close(n2, 4));
 }
 
 TEST(NPCTest, AliveFlagChangesOnMustDie) {
-    std::string name = "bull";
-    Bull b{name, 5, 5};
+    std::string name = "bandit";
+    Bandit b{name, 5, 5};
 
     EXPECT_TRUE(b.is_alive());
     b.must_die();
@@ -78,37 +78,37 @@ TEST(NPCTest, AliveFlagChangesOnMustDie) {
 // ===== Editor / factory =====
 
 TEST(EditorTest, FactoryCreatesCorrectTypesAndPositions) {
-    std::string n1 = "d";
+    std::string n1 = "o";
     std::string n2 = "b";
-    std::string n3 = "r";
+    std::string n3 = "w";
 
-    auto d  = factory(DragonType, n1, 1, 2);
-    auto b  = factory(BullType,   n2, 3, 4);
-    auto t  = factory(ToadType,   n3, 5, 6);
+    auto o  = factory(OrkType,    n1, 1, 2);
+    auto b  = factory(BanditType, n2, 3, 4);
+    auto w  = factory(WerewolfType, n3, 5, 6);
 
-    ASSERT_NE(d,  nullptr);
+    ASSERT_NE(o,  nullptr);
     ASSERT_NE(b,  nullptr);
-    ASSERT_NE(t,  nullptr);
+    ASSERT_NE(w,  nullptr);
 
-    EXPECT_EQ(d->get_type(), DragonType);
-    EXPECT_EQ(b->get_type(), BullType);
-    EXPECT_EQ(t->get_type(), ToadType);
+    EXPECT_EQ(o->get_type(), OrkType);
+    EXPECT_EQ(b->get_type(), BanditType);
+    EXPECT_EQ(w->get_type(), WerewolfType);
 
-    EXPECT_EQ(d->position(), std::make_pair(1, 2));
+    EXPECT_EQ(o->position(), std::make_pair(1, 2));
     EXPECT_EQ(b->position(), std::make_pair(3, 4));
-    EXPECT_EQ(t->position(), std::make_pair(5, 6));
+    EXPECT_EQ(w->position(), std::make_pair(5, 6));
 }
 
 TEST(EditorTest, SaveAndLoadRoundTripKeepsCount) {
     set_t array;
 
-    std::string n1 = "d";
+    std::string n1 = "o";
     std::string n2 = "b";
-    std::string n3 = "r";
+    std::string n3 = "w";
 
-    array.insert(factory(DragonType, n1, 1, 2));
-    array.insert(factory(BullType,   n2, 3, 4));
-    array.insert(factory(ToadType,   n3, 5, 6));
+    array.insert(factory(OrkType,    n1, 1, 2));
+    array.insert(factory(BanditType, n2, 3, 4));
+    array.insert(factory(WerewolfType, n3, 5, 6));
 
     const std::string filename = "test_npcs.txt";
     save(array, filename);
@@ -124,8 +124,8 @@ TEST(FightManagerTest, AddEventIsThreadSafeAndDoesNotThrow) {
     std::string n1 = "a";
     std::string n2 = "b";
 
-    auto attacker = factory(BullType, n1, 0, 0);
-    auto defender = factory(DragonType, n2, 1, 1);
+    auto attacker = factory(BanditType, n1, 0, 0);
+    auto defender = factory(OrkType,    n2, 1, 1);
 
     EXPECT_NO_THROW({
         FightManager::get().add_event({attacker, defender});

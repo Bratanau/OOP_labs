@@ -23,14 +23,14 @@ void Bandit::save(std::ostream &os)
 
 bool Bandit::fight(std::shared_ptr<Ork> other)
 {
-    fight_notify(other, true);
-    return true;
+    fight_notify(other, false);
+    return false;
 }
 
 bool Bandit::fight(std::shared_ptr<Werewolf> other)
 {
-    fight_notify(other, false);
-    return false;
+    fight_notify(other, true);
+    return true;
 }
 
 bool Bandit::fight(std::shared_ptr<Bandit> other)

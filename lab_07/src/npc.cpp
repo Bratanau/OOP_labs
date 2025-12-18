@@ -9,16 +9,16 @@ NPC::NPC(NpcType t, std::istream &is) : type(t) {
     is >> y;
 }
 
-bool FightVisitor::visit(std::shared_ptr<Bull> bull) {
-    return attacker->fight(bull);
+bool FightVisitor::visit(std::shared_ptr<Ork> ork) {
+    return attacker->fight(ork);
 }
 
-bool FightVisitor::visit(std::shared_ptr<Dragon> dragon) {
-    return attacker->fight(dragon);
+bool FightVisitor::visit(std::shared_ptr<Werewolf> werewolf) {
+    return attacker->fight(werewolf);
 }
 
-bool FightVisitor::visit(std::shared_ptr<Toad> toad) {
-    return attacker->fight(toad);
+bool FightVisitor::visit(std::shared_ptr<Bandit> bandit) {
+    return attacker->fight(bandit);
 }
 
 void NPC::subscribe(std::shared_ptr<IFightObserver> observer) {

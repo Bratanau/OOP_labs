@@ -1,46 +1,36 @@
 cmake_minimum_required(VERSION 3.10)
-project(main)
+project(lab_07 LANGUAGES CXX)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
+# Используем C++20, т.к. в коде применяются concepts
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
-# Добавление опций компиляции
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror=maybe-uninitialized")
-
-# Установка Google Test
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG v1.15.0
-  TLS_VERIFY false
+add_executable(lab_07_run
+    main.cpp
+    src/bandit.cpp
+    src/editor.cpp
+    src/npc.cpp
+    src/ork.cpp
+    src/werewolf.cpp
+    src/fightManager.cpp
+    src/utils.cpp
 )
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
 
-
-add_library(${CMAKE_PROJECT_NAME}_lib 
-src/Bull.cpp
-src/Dragon.cpp
-src/Toad.cpp
-src/editor.cpp
-src/fightManager.cpp
-src/npc.cpp
-src/utils.cpp
+add_executable(lab_07_tests
+    tests/main_test.cpp
+    src/bandit.cpp
+    src/editor.cpp
+    src/npc.cpp
+    src/ork.cpp
+    src/werewolf.cpp
+    src/fightManager.cpp
+    src/utils.cpp
 )
-add_executable(${CMAKE_PROJECT_NAME}_exe main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib)
+target_link_libraries(lab_07_tests PRIVATE gtest)
 
-# Добавление тестов
+target_include_directories(lab_07_run PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(lab_07_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 enable_testing()
-
-add_executable(tests test/main_test.cpp)
-target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib gtest_main)
-
-# Добавление тестов в тестовый набор
-add_test(NAME MyProjectTests COMMAND tests)
+add_test(NAME lab_07_tests COMMAND lab_07_tests)
